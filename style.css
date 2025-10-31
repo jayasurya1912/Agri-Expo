@@ -4,6 +4,89 @@
      
     }
 
+       .agriField-preloader {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(135deg, #e9f9ee, #c9f3d4);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 99999;
+      transition: opacity 1s ease, visibility 1s ease;
+      overflow: hidden;
+    }
+
+    /* Field bar container */
+    .agriField-bars {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 8px;
+      height: 60px;
+      margin-bottom: 25px;
+    }
+
+    .agriField-bar {
+      width: 10px;
+      height: 10px;
+      background: linear-gradient(to top, #28a745, #7bed9f);
+      border-radius: 5px;
+      animation: growBar 1.2s infinite ease-in-out;
+    }
+
+    /* Delay each bar for wave animation */
+    .agriField-bar:nth-child(1) { animation-delay: 0s; }
+    .agriField-bar:nth-child(2) { animation-delay: 0.1s; }
+    .agriField-bar:nth-child(3) { animation-delay: 0.2s; }
+    .agriField-bar:nth-child(4) { animation-delay: 0.3s; }
+    .agriField-bar:nth-child(5) { animation-delay: 0.4s; }
+    .agriField-bar:nth-child(6) { animation-delay: 0.5s; }
+    .agriField-bar:nth-child(7) { animation-delay: 0.6s; }
+
+    /* Text animation */
+    .agriField-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #218838;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: center;
+      animation: fadeText 1.6s infinite alternate;
+    }
+
+    .agriField-sub {
+      font-size: 16px;
+      color: #4c925d;
+      margin-top: 5px;
+      letter-spacing: 1px;
+      animation: fadeInUp 2s ease-in-out infinite alternate;
+    }
+
+    /* Keyframes */
+    @keyframes growBar {
+      0%, 100% { height: 10px; opacity: 0.6; }
+      50% { height: 60px; opacity: 1; }
+    }
+
+    @keyframes fadeText {
+      from { opacity: 0.3; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1.05); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0.4; transform: translateY(5px); }
+      to { opacity: 1; transform: translateY(-5px); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .agriField-preloader.hidden {
+      animation: fadeOut 1s forwards;
+    }
+
     .navbar-custom {
       background: #fdfdf5;
     }
@@ -2596,5 +2679,579 @@
       .expo-stats-card {
         width: 80px;
         height: 80px;
+      }
+    }
+       .expo-sponsor-section {
+      background: linear-gradient(135deg, #ffffff 0%, #e9f5ee 100%);
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expo-sponsor-title {
+      font-weight: 700;
+      font-size: 32px;
+      color: #28a745;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease;
+    }
+
+    .expo-sponsor-subtitle {
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* Sponsor Logos */
+    .expo-sponsor-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      animation: fadeInUp 1.5s ease;
+      
+    }
+
+    .expo-sponsor-box img {
+      max-width: 120px;
+      height: auto;
+      transition: transform 0.4s ease;
+     
+    }
+
+    .expo-sponsor-box:hover img {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+
+    .expo-sponsor-box:hover {
+      box-shadow: 0 6px 20px rgba(40,167,69,0.3);
+      transform: translateY(-5px);
+    }
+
+    /* Keyframes */
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Section Divider */
+    .expo-sponsor-divider {
+      width: 60px;
+      height: 4px;
+      background-color: #28a745;
+      margin: 0 auto 40px;
+      border-radius: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .expo-sponsor-box img {
+        max-width: 100px;
+      }
+    }
+       .expo-sponsor-benefits {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #f8fff9 0%, #ffffff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expo-sponsor-benefits::before,
+    .expo-sponsor-benefits::after {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(40, 167, 69, 0.08);
+      border-radius: 50%;
+      animation: floatShape 8s ease-in-out infinite alternate;
+    }
+
+    .expo-sponsor-benefits::before {
+      top: -60px;
+      left: -80px;
+    }
+
+    .expo-sponsor-benefits::after {
+      bottom: -80px;
+      right: -100px;
+      animation-delay: 2s;
+    }
+
+    .expo-sponsor-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .expo-sponsor-title h6 {
+      color: #8b4513;
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .expo-sponsor-title h2 {
+      font-weight: 700;
+      color: #1e1e1e;
+    }
+
+    .expo-benefit-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      padding: 40px 25px;
+      text-align: center;
+      transition: all 0.4s ease;
+      height: 100%;
+      animation: fadeInUp 1s ease forwards;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expo-benefit-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(40,167,69,0.1) 0%, rgba(40,167,69,0.2) 100%);
+      transition: 0.6s;
+      z-index: 1;
+    }
+
+    .expo-benefit-card:hover::after {
+      left: 0;
+    }
+
+    .expo-benefit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(40, 167, 69, 0.25);
+    }
+
+    .expo-benefit-icon {
+      font-size: 40px;
+      color: #28a745;
+      margin-bottom: 20px;
+      animation: bounce 2.5s infinite;
+      z-index: 2;
+      position: relative;
+    }
+
+    .expo-benefit-card h5 {
+      font-weight: 600;
+      color: #1e1e1e;
+      margin-bottom: 12px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .expo-benefit-card p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.7;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Keyframes */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes floatShape {
+      from {
+        transform: translate(0, 0);
+      }
+      to {
+        transform: translate(40px, 40px);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .expo-benefit-card {
+        margin-bottom: 30px;
+      }
+    }
+    .gallery-box {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
+}
+
+.gallery-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .4s ease-in-out;
+}
+
+/* Hover Zoom */
+.gallery-box:hover img {
+  transform: scale(1.08);
+}
+
+/* Smooth fade animation */
+.gallery-item {
+  animation: fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp {
+  0% {opacity: 0; transform: translateY(25px);}
+  100% {opacity: 1; transform: translateY(0);}
+}
+ .expo-sponsor-benefits {
+      padding: 80px 0;
+      background: linear-gradient(180deg, #f8fff9 0%, #ffffff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expo-sponsor-benefits::before,
+    .expo-sponsor-benefits::after {
+      content: '';
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: rgba(40, 167, 69, 0.08);
+      border-radius: 50%;
+      animation: floatShape 8s ease-in-out infinite alternate;
+    }
+
+    .expo-sponsor-benefits::before {
+      top: -60px;
+      left: -80px;
+    }
+
+    .expo-sponsor-benefits::after {
+      bottom: -80px;
+      right: -100px;
+      animation-delay: 2s;
+    }
+
+    .expo-sponsor-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .expo-sponsor-title h6 {
+      color: #8b4513;
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .expo-sponsor-title h2 {
+      font-weight: 700;
+      color: #1e1e1e;
+    }
+
+    .expo-benefit-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      padding: 40px 25px;
+      text-align: center;
+      transition: all 0.4s ease;
+      height: 100%;
+      animation: fadeInUp 1s ease forwards;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expo-benefit-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(40,167,69,0.1) 0%, rgba(40,167,69,0.2) 100%);
+      transition: 0.6s;
+      z-index: 1;
+    }
+
+    .expo-benefit-card:hover::after {
+      left: 0;
+    }
+
+    .expo-benefit-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(40, 167, 69, 0.25);
+    }
+
+    .expo-benefit-icon {
+      font-size: 40px;
+      color: #28a745;
+      margin-bottom: 20px;
+      animation: bounce 2.5s infinite;
+      z-index: 2;
+      position: relative;
+    }
+
+    .expo-benefit-card h5 {
+      font-weight: 600;
+      color: #1e1e1e;
+      margin-bottom: 12px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .expo-benefit-card p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.7;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Keyframes */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes floatShape {
+      from {
+        transform: translate(0, 0);
+      }
+      to {
+        transform: translate(40px, 40px);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .expo-benefit-card {
+        margin-bottom: 30px;
+      }
+    }
+    .expo-sponsor-section {
+      background: linear-gradient(135deg, #ffffff 0%, #e9f5ee 100%);
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expo-sponsor-title {
+      font-weight: 700;
+      font-size: 32px;
+      color: #28a745;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease;
+    }
+
+    .expo-sponsor-subtitle {
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 40px;
+    }
+
+    /* Sponsor Logos */
+    .expo-sponsor-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      animation: fadeInUp 1.5s ease;
+      
+    }
+
+    .expo-sponsor-box img {
+      max-width: 120px;
+      height: auto;
+      transition: transform 0.4s ease;
+     
+    }
+
+    .expo-sponsor-box:hover img {
+      transform: scale(1.05);
+      filter: grayscale(0%);
+    }
+
+    .expo-sponsor-box:hover {
+      box-shadow: 0 6px 20px rgba(40,167,69,0.3);
+      transform: translateY(-5px);
+    }
+
+    /* Keyframes */
+    @keyframes fadeInDown {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* Section Divider */
+    .expo-sponsor-divider {
+      width: 60px;
+      height: 4px;
+      background-color: #28a745;
+      margin: 0 auto 40px;
+      border-radius: 10px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .expo-sponsor-box img {
+        max-width: 100px;
+      }
+    }
+
+      .agriWhy-section {
+      background: linear-gradient(135deg, #f3fff5, #e4f9e8);
+      padding: 80px 0;
+      overflow: hidden;
+    }
+
+    .agriWhy-img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      animation: slideLeft 1.2s ease-out;
+    }
+
+    .agriWhy-content {
+      padding: 20px 30px;
+      animation: fadeInRight 1.2s ease-out;
+    }
+
+    .agriWhy-content h2 {
+      color: #218838;
+      font-weight: 800;
+      font-size: 36px;
+      margin-bottom: 25px;
+      position: relative;
+    }
+
+    .agriWhy-content h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background: #28a745;
+      border-radius: 2px;
+      animation: growLine 1.5s ease-in-out;
+    }
+
+    .agriWhy-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .agriWhy-content ul li {
+      font-size: 17px;
+      margin-bottom: 10px;
+      padding-left: 32px;
+      position: relative;
+      color: #333;
+      line-height: 1.7;
+      transition: all 0.3s ease;
+      animation: fadeInUp 1.5s ease both;
+    }
+
+    /* ✅ Green Tick Style */
+    .agriWhy-content ul li::before {
+      content: "✔";
+      color: #28a745;
+      font-weight: 700;
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-size: 18px;
+      line-height: 1.5;
+      transition: transform 0.3s ease;
+    }
+
+    /* Hover Animation for Items */
+    .agriWhy-content ul li:hover {
+      color: #218838;
+      transform: translateX(5px);
+    }
+
+    .agriWhy-content ul li:hover::before {
+      transform: scale(1.3);
+    }
+
+    /* Keyframes for Animations */
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(60px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideLeft {
+      from { opacity: 0; transform: translateX(-60px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes growLine {
+      from { width: 0; }
+      to { width: 60px; }
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .agriWhy-content {
+        text-align: center;
+      }
+      .agriWhy-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
       }
     }
