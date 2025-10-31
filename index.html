@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+ <div class="container-fluid" style="padding: 0px;overflow: hidden;">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="images/top.png" width="100%"   alt="">
+            </div>
+        </div>
+    </div>
+    
+
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <!-- Logo (Mobile Only) -->
+    <a class="navbar-brand d-lg-none" href="index.html">
+      <img src="images/mainlogo.png" alt="Logo" class="navbar-logo">
+    </a>
+
+    <!-- Hamburger (sidebar trigger) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center d-none d-lg-block">
+      <ul class="navbar-nav w-100 justify-content-center">
+        <!-- Left Menu -->
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+
+        <!-- Dropdown for OUR PARTNERS -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="partnersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            EXHIBITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
+            <li><a class="dropdown-item" href="exhibitors.html">EXHIBITORS</a></li>
+            <li><a class="dropdown-item" href="images/floorplan.pdf">FLOOR PLAN</a></li>
+            <li><a class="dropdown-item" href="images/broucher.pdf">BROCHURE</a></li>
+          </ul>
+        </li>
+
+        <!-- Center Logo -->
+        
+
+        <!-- Right Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="partnersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            VISITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
+            <li><a class="dropdown-item" href="visitors.html">VISITORS</a></li>
+            <li><a class="dropdown-item" href="images/floorplan.pdf">FLOOR PLAN</a></li>
+            <li><a class="dropdown-item" href="images/broucher.pdf">BROCHURE</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+  <a class="nav-link right-gap" href="sponsership.html">
+    SPONSORSHIP
+  </a>
+</li>
+
+
+          <a class="nav-link right-gap" href="gallery.html">
+    GALLERY
+  </a>
+</li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title"><img src="images/mainlogo.png" style="align-items: center;" width="100px" alt=""></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link " href="index.html">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+      <li class="nav-item"><a class="nav-link" href="products.html">PRODUCTS</a></li>
+
+      <!-- Dropdown inside Offcanvas -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="partnersDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          OUR PARTNERS
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="partnersDropdownMobile">
+          <li><a class="dropdown-item" href="lauritzknudsen.html">LAURITZ KNUDSEN</a></li>
+            <li><a class="dropdown-item" href="salzer.html">SALZER</a></li>
+            <li><a class="dropdown-item" href="esbee.html">ESBEE</a></li>
+            <li><a class="dropdown-item" href="gic.html">GIC</a></li>
+            <li><a class="dropdown-item" href="cselectric.html">C&S ELECTIC</a></li>
+            <li><a class="dropdown-item " href="indoasian.html">INDOASIAN</a></li>
+            <li><a class="dropdown-item" href="minilecindia.html">MINILECINDIA</a></li>
+            <li><a class="dropdown-item" href="elmex.html">ELMEX</a></li>
+            <li><a class="dropdown-item" href="selec.html">SELEC</a></li>
+            <li><a class="dropdown-item" href="threed.html">3D</a></li>
+            <li><a class="dropdown-item" href="wago.html">WAGO</a></li>
+            <li><a class="dropdown-item" href="crigroups.html">CRI GROUPS</a></li>
+            <li><a class="dropdown-item" href="lapp.html">LAPP</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="ourclients.html">OUR CLIENTS</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- Bootstrap CSS -->
+
+
+<div id="bannerCarousel" class="carousel slide" data-bs-ride="carousel" >
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="0" class="active rounded-circle"></button>
+    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="1" class="rounded-circle"></button>
+    <button type="button" data-bs-target="#bannerCarousel" data-bs-slide-to="2" class="rounded-circle"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/banthree.png" class="d-block w-100 img-fluid" alt="Banner 1">
+    </div>
+    <div class="carousel-item">
+      <img src="images/bantwo.png" class="d-block w-100 img-fluid" alt="Banner 2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/banone.png" class="d-block w-100 img-fluid" alt="Banner 3">
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#bannerCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#bannerCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </button>
+</div>
+
+
+ <section class="conference-section">
+    <h6>Second Edition - Bigger, Better!</h6>
+   <h2 id="typingText" class="text-black"></h2>
+
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-3 col-sm-6" data-aos="zoom-out-right">
+          <div class="conference-card">
+            <img src="images/hone.jpg" alt="Apply to Speak">
+            <a href="exhibitors.html" class=" overlay-btn">Exhibit & Grow</a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6" data-aos="zoom-out-right">
+          <div class="conference-card">
+            <img src="images/htwo.jpg" alt="Become an Exhibitor">
+            <a href="contact.html" class="overlay-btn">Grow Your Presence</a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6" data-aos="zoom-out-right">
+          <div class="conference-card">
+            <img src="images/hthree.jpg" alt="Get Attendee Pass">
+            <a href="contact.html" class="overlay-btn">Book Your Stall</a>
+          </div>
+        </div>
+
+        <div class="col-md-3 col-sm-6" data-aos="zoom-out-right">
+          <div class="conference-card">
+            <img src="images/hfour.jpg" alt="Nominate Now">
+            <a href="visitors.html" class="overlay-btn">Free Visitor Pass</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+    <section class="marquee-section">
+    <div class="container-fluid">
+      <div class="marquee-track">
+
+        <div class="marquee-inner">
+          <span class="marquee-item">Talent Acquisition Employee Engagement Employee Engagement Employee Engagement Employee Engagement</span>
+         
+        </div>
+
+        <!-- Duplicate for infinite loop -->
+
+      </div>
+    </div>
+  </section>
+
+   
+  <div class="container-fluid about-section ">
+  <section class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Background Image -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="" alt="abtn">
+      </div>
+
+      <!-- Right Text Content -->
+      <div class="col-lg-6 about-content">
+        <h6>Overview</h6>
+        <h2>About <span style="color:#000;"> #AGRI AND POULTRY TEC</span></h2>
+        <p style="font-size: 17PX;text-align: justify;">
+          Agri & Poultry Tec Expo 2026 stands as India’s most comprehensive business platform dedicated to the advancement of both agriculture and poultry sectors. The event brings global innovators, technology providers, equipment manufacturers, feed and nutrition suppliers, farm automation experts, and solution-driven enterprises together under one roof. It creates an unmatched environment for product showcases, knowledge exchange, and brand visibility at scale.
+        </p>
+        <p style="font-size: 17PX;text-align: justify;">
+         Designed to serve serious buyers and decision-makers from across India and international markets, the expo enables exhibitors to access new business channels, strike strategic partnerships, and expand their market presence. For visitors, it delivers hands-on exposure to groundbreaking technologies, economic solutions, and skill-enhancing expertise that drive measurable growth.
+        </p>
+
+        <ul class="about-list" >
+          <li>Discover Technological Innovations</li>
+          <li>Connect with Industry Leaders</li>
+          <li>Ignite Collaborations for Growth</li>
+          <li>Navigate Future Trends</li>
+          <li>Showcase Your Solutions</li>
+          <li>Access Market Intelligence</li>
+          <li>Promote Sustainable Agriculture</li>
+          <li>Invest in Agricultural Excellence</li>
+          
+          <li>Position Your Brand</li>
+        </ul>
+
+        <a href="about.html" class="btn about-btn">Show Interest</a>
+
+        <img src="images/grain.png" class="rotate-img " alt="">
+      </div>
+    </div>
+  </section>
+  </div>
+
+
+    <section class="countdown-section" >
+    <div class="container">
+      <div class="row align-items-center justify-content-between">
+        
+        <!-- Left: Logo + Text -->
+        <div class="col-lg-3 col-md-4 text-lg-start text-center mb-4 mb-lg-0 countdown-left">
+          <img src="images/mainlogo.png" style="background-color: white;width: 300px;height: 110px;" alt="Government of India Logo">
+          
+        </div>
+
+        <!-- Center: Countdown -->
+        <div class="col-lg-5 col-md-6 text-center">
+          <div class="countdown-timer" id="timer">
+            <span id="days">00</span> : 
+            <span id="hours">00</span> : 
+            <span id="minutes">00</span> : 
+            <span id="seconds">00</span>
+          </div>
+          <div class="countdown-labels">
+            <span>Days</span>
+            <span>Hours</span>
+            <span>Minutes</span>
+            <span>Seconds</span>
+          </div>
+        </div>
+
+        <!-- Right: Button -->
+        <div class="col-lg-3 col-md-12 text-lg-end text-center mt-4 mt-lg-0">
+          <a href="exhibitors.html" class="btn countdown-btn">
+            Book your stand now
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="cards-section">
+  <div class="container cards-container">
+    <h2 class="section-heading">Get Involved with AgriNext Conference Dubai 2025</h2>
+
+    <div class="row g-4">
+      <!-- Repeat this structure for all 12 cards -->
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-out-right">
+        <div class="card conference-card">
+          <img src="images/eone.jpg" class="card-img-top" alt="Conference Image">
+          <div class="card-body">
+            <h5 class="card-title">Tractors and advanced farm machinery</h5>
+            <a href="exhibitors.html" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-out-right">
+        <div class="card conference-card">
+          <img src="images/etwo.jpg" class="card-img-top" alt="Conference Image">
+          <div class="card-body">
+            <h5 class="card-title">Modern irrigation and fertigation systems</h5>
+            <a href="exhibitors.html" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-out-right">
+        <div class="card conference-card">
+          <img src="images/ethree.jpg" class="card-img-top" alt="Conference Image">
+          <div class="card-body">
+            <h5 class="card-title">Greenhouse and polyhouse technology</h5>
+            <a href="exhibitors.html" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-out-right">
+        <div class="card conference-card">
+          <img src="images/efour.jpg" class="card-img-top" alt="Conference Image">
+          <div class="card-body">
+            <h5 class="card-title">Smart farming and automation tools</h5>
+            <a href="exhibitors.html" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add 8 more similar cards below -->
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-out-right">
+        <div class="card conference-card">
+          <img src="images/efive.jpg" class="card-img-top" alt="Conference Image">
+          <div class="card-body">
+            <h5 class="card-title">Crop protection, nutrition and growth solutions</h5>
+            <a href="exhibitors.html" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-out-right">
+        <div class="card conference-card">
+          <img src="images/esix.jpg" class="card-img-top" alt="Conference Image">
+          <div class="card-body">
+            <h5 class="card-title">Precision agriculture and data-driven farming technologies</h5>
+            <a href="exhibitors.html" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copy and edit titles for remaining cards -->
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-out-right">
+        <div class="card conference-card">
+          <img src="images/eseven.jpg" class="card-img-top" alt="Conference Image">
+          <div class="card-body">
+            <h5 class="card-title">Precision Agriculture Farming Product</h5>
+            <a href="exhibitors.html" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-sm-12" data-aos="zoom-out-right">
+        <div class="card conference-card">
+          <img src="images/eeight.jpg" class="card-img-top" alt="Conference Image">
+          <div class="card-body">
+            <h5 class="card-title">Farm Management Agriculture Equipment</h5>
+            <a href="exhibitors.html" class="btn btn-success">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="agri-section">
+    <div class="agri-content">
+      <h3>Each new edition - A Trend Setter</h3>
+      <p>🌾 AGRI INTEX is geared up to mark its 23rd edition. In retrospect, successful 23 editions, over 1 lakh business and industry visitors, more than 500 exhibitors, 1000 booths, 350 product categories and trade turnover in excess of Rs.1,000 million in all its past editions. AGRI INTEX has witnessed the overwhelming response from the industry and all trade.</p>
+
+      <p>🌾 Be the patronage of the concerned departments of the Indian and State Governments, the participation from leading national and international organizations and enterprises has been phenomenal. In addition, with due support from the media, AGRI INTEX has been accorded the iconic status, that it truly deserves, making every edition a success story.</p>
+
+      <h4 class="survey-title">Exhibitor’s Survey</h4>
+
+      <div class="progress-container">
+        <div class="progress-label">
+          <span>Agricultural equipment and machinery</span>
+          <span>45%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="--target-width: 45%;"></div>
+        </div>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-label">
+          <span>Fertilizers and chemicals</span>
+          <span>6%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="--target-width: 6%;"></div>
+        </div>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-label">
+          <span>Agriculture</span>
+          <span>9%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="--target-width: 9%;"></div>
+        </div>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-label">
+          <span>Biotechnology</span>
+          <span>12%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="--target-width: 12%;"></div>
+        </div>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-label">
+          <span>Irrigation and water technologies</span>
+          <span>7%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="--target-width: 7%;"></div>
+        </div>
+      </div>
+
+      <div class="progress-container">
+        <div class="progress-label">
+          <span>Livestock / Dairy farming / Poultry</span>
+          <span>4%</span>
+        </div>
+        <div class="progress">
+          <div class="progress-bar" style="--target-width: 4%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+<section class="card-section">
+    <div class="container">
+      <h2>Our Equipment & Solutions</h2>
+
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="anim-card">
+            <img src="images/pone.jpg" alt="Automation Systems">
+            <div class="card-body">
+              <h4>Egg grading and meat processing equipment</h4>
+              <a href="exhibitors.html" class="btn anim-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="anim-card">
+            <img src="images/ptwo.jpg" alt="Feed Management">
+            <div class="card-body">
+              <h4>Poultry housing and insulation systems</h4>
+              <a href="exhibitors.html" class="btn anim-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="anim-card">
+            <img src="images/pthree.jpg" alt="Climate Control">
+            <div class="card-body">
+              <h4>Feeding, drinking and broiler management setups</h4>
+              <a href="exhibitors.html" class="btn anim-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="anim-card">
+            <img src="images/pfour.jpg" alt="Biosecurity Tools">
+            <div class="card-body">
+              <h4>Poultry health, vaccines and biosecurity solutions</h4>
+              <a href="exhibitors.html" class="btn anim-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="anim-card">
+            <img src="images/pfive.jpg" alt="Energy Solutions">
+            <div class="card-body">
+              <h4>Waste management and hygiene equipment</h4>
+              <a href="exhibitors.html" class="btn anim-btn">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-lg-4 col-md-6" data-aos="flip-down">
+          <div class="anim-card">
+            <img src="images/psix.jpg" alt="Waste Management">
+            <div class="card-body">
+              <h4>Climate control and automation for poultry farms</h4>
+              <a href="exhibitors.html" class="btn anim-btn">Learn More</a> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+    <section class="why-section">
+    <div class="container">
+      <h2 class="why-title">Why You Should Be Here</h2>
+      <div class="row g-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <div class="why-box">
+            <i class="bx bx-bulb why-icon"></i>
+            <p class="why-text">Experience the latest innovations in agriculture and poultry under one roof.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="why-box">
+            <i class="bx bx-group why-icon"></i>
+            <p class="why-text">Meet top machinery manufacturers, technology providers and industry leaders.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="why-box">
+            <i class="fa-solid fa-handshake why-icon"></i>
+            <p class="why-text">Gain new business partnerships through dedicated B2B networking zones.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="why-box">
+            <i class="bx bx-show why-icon"></i>
+            <p class="why-text">See live demos, product launches and hands-on equipment experience.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="why-box">
+            <i class="bx bx-brain why-icon"></i>
+            <p class="why-text">Learn from expert sessions on smart farming and poultry advancements.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="why-box">
+            <i class="bx bx-trending-up why-icon"></i>
+            <p class="why-text">Discover cost-saving and productivity-boosting solutions for your business.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="why-box">
+            <i class="bx bx-analyse why-icon"></i>
+            <p class="why-text">Compare multiple brands and products instantly for smarter purchasing decisions.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="why-box">
+            <i class="bx bx-diamond why-icon"></i>
+            <p class="why-text">Exclusive offers, dealer opportunities and franchise connections await you.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+   <div class="container">
+    <h2 class="expect-title">What to Expect</h2>
+      <p class="expect-subtext">
+        Step into a business-driven expo experience where innovation meets real-world action. 
+        Every zone of the Agri & Poultry Tec Expo is designed to deliver learning, networking 
+        and growth opportunities for farmers, entrepreneurs and global industry leaders.
+      </p>
+  </div>
+
+  <section class="expect-section">
+    <div class="container">
+      
+
+      <div class="timeline">
+        <!-- 1 -->
+        <div class="row timeline-item d-flex align-items-start" data-aos="fade-up-right">
+          <div class="timeline-icon"><i class="bx bx-cog"></i></div>
+          <div class="col-lg-6 timeline-content" >
+            <h4>Live Product Demonstrations</h4>
+            <p>
+              See cutting-edge machinery, smart farming tools and poultry automation systems in action. 
+              Compare performance and make confident purchase decisions with hands-on experience.
+            </p>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="row timeline-item d-flex align-items-start" data-aos="fade-up-left">
+          <div class="timeline-icon"><i class="fa-solid fa-handshake"></i></div>
+          <div class="col-lg-6 timeline-content" >
+            <h4>B2B Matchmaking Zone</h4>
+            <p>
+              Connect directly with manufacturers, dealers, distributors and key decision makers. 
+              Build partnerships, explore dealership agreements, and expand your network.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="row timeline-item d-flex align-items-start" data-aos="fade-up-right">
+          <div class="timeline-icon"><i class="bx bx-globe"></i></div>
+          <div class="col-lg-6 timeline-content" >
+            <h4>International Buyer Lounge</h4>
+            <p>
+              A premium business hub for global delegates to hold meetings and close deals. 
+              Ideal for companies exploring export, import and joint venture opportunities.
+            </p>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="row timeline-item d-flex align-items-start" data-aos="fade-up-left">
+          <div class="timeline-icon"><i class="bx bx-chip"></i></div>
+          <div class="col-lg-6 timeline-content" >
+            <h4>Interactive Test & Technology Displays</h4>
+            <p>
+              Get up close with digital farm solutions and prototypes. Experience 
+              real-time product trials and receive technical guidance from experts.
+            </p>
+          </div>
+        </div>
+
+        <!-- 5 -->
+      </div>
+    </div>
+  </section>
+
+ <section class="testimonial-section">
+    <h2>What Visitors Say About Agri Expo</h2>
+
+    <div class="testimonial-slider">
+
+      <!-- Slide 1 -->
+      <div class="testimonial-slide">
+        <div class="testimonial-left">
+          <img src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=300&q=80" alt="">
+        </div>
+        <div class="testimonial-right">
+          <i class="fa fa-quote-left"></i>
+          <p>“Agri Expo transformed my approach to organic farming. The insights and equipment demos were truly eye-opening.”</p>
+          <h5>Ramesh Kumar</h5>
+          <span>Progressive Farmer, Tamil Nadu</span>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="testimonial-slide">
+        <div class="testimonial-left">
+          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80" alt="">
+        </div>
+        <div class="testimonial-right">
+          <i class="fa fa-quote-left"></i>
+          <p>“This event connects innovation with agriculture. I found new technologies and clients that boosted my startup’s reach.”</p>
+          <h5>Priya Nair</h5>
+          <span>AgriTech Entrepreneur</span>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="testimonial-slide">
+        <div class="testimonial-left">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=300&q=80" alt="">
+        </div>
+        <div class="testimonial-right">
+          <i class="fa fa-quote-left"></i>
+          <p>“A great opportunity to showcase sustainable research and exchange ideas with top minds in agriculture.”</p>
+          <h5>Dr. Vivek Sharma</h5>
+          <span>Agricultural Scientist</span>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="testimonial-slide">
+        <div class="testimonial-left">
+          <img src="https://images.unsplash.com/photo-1603415526960-f7e0328a9a1d?auto=format&fit=crop&w=300&q=80" alt="">
+        </div>
+        <div class="testimonial-right">
+          <i class="fa fa-quote-left"></i>
+          <p>“From leads to partnerships, Agri Expo gave me opportunities to grow my business and connect with thousands of farmers.”</p>
+          <h5>Anita George</h5>
+          <span>Equipment Distributor</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Dots -->
+    <div class="testimonial-dots">
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </section>
+  
+
+  <div class="container my-5">
+  <div class="row contact-section">
+    <!-- Left Image -->
+    <div class="col-md-6 p-0">
+      <img src="images/efour.jpg" alt="Contact Us" class="contact-img h-100">
+    </div>
+
+    <!-- Right Form -->
+    <div class="col-md-6 contact-form">
+      <h3 class="fw-bold text-white mb-3">Send Us a Message</h3>
+      <p class="text-white">Have a project in mind or need expert advice? Fill out the form below and we’ll get back to you within 24 hours.</p>
+
+      <form>
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" placeholder="Full Name"  required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" placeholder="Email"  required>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-control" placeholder="Phone Number"  required>
+        </div>
+
+
+        <div class="mb-3">
+          <label class="form-label">Message</label>
+          <textarea class="form-control" rows="4" placeholder="Message"  required></textarea>
+        </div>
+        
+        <button type="submit" class="btn submit-btn " style="background-color: white; color: #218838;">Submit</button>
+        <div class="privacy-note text-white">We respect your privacy. Your information is safe with us and will never be shared.</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+ <section class="footer-banner">
+    <div class="content">
+      <h2>Join the Agri & Poultry Revolution</h2>
+      <p>
+        Be a part of India’s most dynamic business expo that bridges innovation, technology, and opportunity. 
+        Connect with global leaders, explore smart solutions, and transform your agri-poultry business.
+      </p>
+      <a href="#register" class="btn btn-custom">
+        <i class="fa-solid fa-seedling me-2"></i> Register Now
+      </a>
+    </div>
+  </section>
+
+   
+    
+
+
+
+      <div class="container-fluid" style="padding: 0px;overflow: hidden;">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="images/foot.png" width="100%"  alt="">
+            </div>
+        </div>
+    </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-start">
+        <!-- Logo -->
+        <div class="col-lg-4 col-md-6 footer-logo text-center text-lg-start mb-4 mb-lg-0">
+          <img src="your-logo.png" alt="Agri Intex 2025 Logo">
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <div class="col-lg-4 col-md-6 footer-section mb-4 mb-lg-0">
+          <h5>Explore</h5>
+          <ul class="footer-links p-0">
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>Home</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>About</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>Brochure</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>Visitor Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>Photo Gallery</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-4 col-md-12 footer-section">
+          <h5>Contact</h5>
+          <div class="footer-contact">
+            <p><i class="fa-solid fa-phone"></i> +91 422 2222396</p>
+            <p><i class="fa-solid fa-envelope"></i> agriintex@codissia.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © All Copyright 2025 by Agri-Intex. Designed and Developed by 
+      <a href="#">Webads</a> | 
+      <a href="#">Terms of Use</a> | 
+      <a href="#">Privacy Policy</a>
+    </div>
+  </footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+ 
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Countdown JS -->
+  <script>
+    // Set target date
+    const targetDate = new Date("Dec 15, 2025 09:00:00").getTime();
+
+    const timer = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerHTML = days < 10 ? "0" + days : days;
+      document.getElementById("hours").innerHTML = hours < 10 ? "0" + hours : hours;
+      document.getElementById("minutes").innerHTML = minutes < 10 ? "0" + minutes : minutes;
+      document.getElementById("seconds").innerHTML = seconds < 10 ? "0" + seconds : seconds;
+
+      // Stop countdown
+      if (distance < 0) {
+        clearInterval(timer);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+      }
+    }, 1000);
+  </script>
+  <h2 id="typingText" class="text-black"></h2>
+
+<script>
+  const text = "Get Involved with AgriNext Conference Dubai 2025";
+  const typingElement = document.getElementById("typingText");
+  let index = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    if (!isDeleting && index < text.length) {
+      // Typing forward
+      typingElement.innerHTML = text.substring(0, index + 1);
+      index++;
+      setTimeout(typeEffect, 100);
+    } else if (isDeleting && index > 0) {
+      // Deleting backward
+      typingElement.innerHTML = text.substring(0, index - 1);
+      index--;
+      setTimeout(typeEffect, 50);
+    } else {
+      // Pause before switching direction
+      isDeleting = !isDeleting;
+      setTimeout(typeEffect, 1000);
+    }
+  }
+
+  // Start typing when page loads
+  window.onload = typeEffect;
+</script>
+
+<script>
+  // Scroll timeline grow effect
+  window.addEventListener("scroll", function () {
+    const timeline = document.getElementById("timeline-line");
+    const section = document.querySelector(".timeline-section");
+    const sectionRect = section.getBoundingClientRect();
+    const scrollTop = window.scrollY + window.innerHeight / 2;
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
+
+    let progress = (scrollTop - sectionTop) / sectionHeight;
+    progress = Math.max(0, Math.min(1, progress));
+
+    const lineHeight = progress * sectionHeight;
+    timeline.style.height = `${lineHeight}px`;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agri Intex Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+ <div class="container-fluid" style="padding: 0px;overflow: hidden;">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="images/top.png" width="100%"   alt="">
+            </div>
+        </div>
+    </div>
+    
+
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <!-- Logo (Mobile Only) -->
+    <a class="navbar-brand d-lg-none" href="index.html">
+      <img src="images/mainlogo.png" alt="Logo" class="navbar-logo">
+    </a>
+
+    <!-- Hamburger (sidebar trigger) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center d-none d-lg-block">
+      <ul class="navbar-nav w-100 justify-content-center">
+        <!-- Left Menu -->
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+
+        <!-- Dropdown for OUR PARTNERS -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="partnersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            EXHIBITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
+            <li><a class="dropdown-item" href="lauritzknudsen.html">EXHIBITORS</a></li>
+            <li><a class="dropdown-item" href="salzer.html">EXHIBITORS</a></li>
+          </ul>
+        </li>
+
+        <!-- Center Logo -->
+        
+
+        <!-- Right Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="partnersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            VISITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
+            <li><a class="dropdown-item" href="lauritzknudsen.html">VISITORS</a></li>
+            <li><a class="dropdown-item" href="salzer.html">VISITORS</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link right-gap" href="products.html">FLOOR PLAN</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">BROCHURE</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title"><img src="images/mainlogo.png" style="align-items: center;" width="100px" alt=""></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link " href="index.html">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+      <li class="nav-item"><a class="nav-link" href="products.html">PRODUCTS</a></li>
+
+      <!-- Dropdown inside Offcanvas -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="partnersDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          OUR PARTNERS
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="partnersDropdownMobile">
+          <li><a class="dropdown-item" href="lauritzknudsen.html">LAURITZ KNUDSEN</a></li>
+            <li><a class="dropdown-item" href="salzer.html">SALZER</a></li>
+            <li><a class="dropdown-item" href="esbee.html">ESBEE</a></li>
+            <li><a class="dropdown-item" href="gic.html">GIC</a></li>
+            <li><a class="dropdown-item" href="cselectric.html">C&S ELECTIC</a></li>
+            <li><a class="dropdown-item " href="indoasian.html">INDOASIAN</a></li>
+            <li><a class="dropdown-item" href="minilecindia.html">MINILECINDIA</a></li>
+            <li><a class="dropdown-item" href="elmex.html">ELMEX</a></li>
+            <li><a class="dropdown-item" href="selec.html">SELEC</a></li>
+            <li><a class="dropdown-item" href="threed.html">3D</a></li>
+            <li><a class="dropdown-item" href="wago.html">WAGO</a></li>
+            <li><a class="dropdown-item" href="crigroups.html">CRI GROUPS</a></li>
+            <li><a class="dropdown-item" href="lapp.html">LAPP</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="ourclients.html">OUR CLIENTS</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="container-fluid" style="padding: 0px;margin: 0px;overflow: hidden;">
+  <div class="row">
+    <div class="col-lg-12">
+      <img src="images/aboutbanner.png" width="100%"  alt="">
+    </div>
+  </div>
+</div>
+ <div class="container-fluid about-section mt-5">
+  <section class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Background Image -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <img src="" alt="abtn">
+      </div>
+
+      <!-- Right Text Content -->
+      <div class="col-lg-6 about-content">
+        <h6>Overview</h6>
+        <h2>About <span style="color:#000;"> #AGRI AND POULTRY TEC</span></h2>
+        <p style="font-size: 17PX;text-align: justify;">
+          Agri & Poultry Tec Expo 2026 stands as India’s most comprehensive business platform dedicated to the advancement of both agriculture and poultry sectors. The event brings global innovators, technology providers, equipment manufacturers, feed and nutrition suppliers, farm automation experts, and solution-driven enterprises together under one roof. It creates an unmatched environment for product showcases, knowledge exchange, and brand visibility at scale.
+        </p>
+        <p style="font-size: 17PX;text-align: justify;">
+         Designed to serve serious buyers and decision-makers from across India and international markets, the expo enables exhibitors to access new business channels, strike strategic partnerships, and expand their market presence. For visitors, it delivers hands-on exposure to groundbreaking technologies, economic solutions, and skill-enhancing expertise that drive measurable growth.
+        </p>
+
+        <ul class="about-list" >
+          <li>Discover Technological Innovations</li>
+          <li>Connect with Industry Leaders</li>
+          <li>Ignite Collaborations for Growth</li>
+          <li>Navigate Future Trends</li>
+          <li>Showcase Your Solutions</li>
+          <li>Access Market Intelligence</li>
+          <li>Promote Sustainable Agriculture</li>
+          <li>Invest in Agricultural Excellence</li>
+          
+          <li>Position Your Brand</li>
+        </ul>
+
+        <a href="contact.html" class="btn about-btn">Get In Touch</a>
+
+        <img src="images/grain.png" class="rotate-img " alt="">
+      </div>
+    </div>
+  </section>
+  </div>
+
+  
+  <section class="expo-stats-section">
+    <div class="expo-stats-overlay"></div>
+    <div class="container expo-stats-container">
+      <h5 class="expo-stats-title">Event Statistics</h5>
+      <div class="row justify-content-center g-4">
+
+        <div class="col-6 col-md-2">
+          <div class="expo-stats-card"><i class="fas fa-id-card expo-stats-icon"></i></div>
+          <div class="expo-stats-number" data-target="500">0</div>
+          <div class="expo-stats-text">Exhibitors</div>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <div class="expo-stats-card"><i class="fas fa-store expo-stats-icon"></i></div>
+          <div class="expo-stats-number" data-target="1000">0</div>
+          <div class="expo-stats-text">Stalls</div>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <div class="expo-stats-card"><i class="fas fa-users expo-stats-icon"></i></div>
+          <div class="expo-stats-number" data-target="123000">0</div>
+          <div class="expo-stats-text">Visitors</div>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <div class="expo-stats-card"><i class="fas fa-money-bill-wave expo-stats-icon"></i></div>
+          <div class="expo-stats-number" data-target="1000">0</div>
+          <div class="expo-stats-text">Million (INR)<br>Trade Turnover</div>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <div class="expo-stats-card"><i class="fas fa-map-marker-alt expo-stats-icon"></i></div>
+          <div class="expo-stats-number" data-target="12500">0</div>
+          <div class="expo-stats-text">Areas</div>
+        </div>
+
+        <div class="col-6 col-md-2">
+          <div class="expo-stats-card"><i class="fas fa-building expo-stats-icon"></i></div>
+          <div class="expo-stats-number" data-target="7">0</div>
+          <div class="expo-stats-text">Halls (Codissia)</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section-bg">
+<div class="leaf-shape"></div>
+
+<div class="container">
+  <div class="text-center">
+    <h2 class="section-title">Our Vision & Mission</h2>
+    <p class="text-muted mb-5">
+      Empowering agriculture & poultry innovations for a sustainable future.
+    </p>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Vision -->
+    <div class="col-lg-6">
+      <div class="icon-box">
+        <i class="bi bi-lightbulb-fill"></i>
+        <h4>Our Vision</h4>
+        <p>
+          To transform agriculture & poultry technology by creating a global hub of knowledge, innovation, and market-ready solutions that support farmers, agripreneurs & livestock industries.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mission -->
+    <div class="col-lg-6">
+      <div class="icon-box">
+        <i class="bi bi-flag-fill"></i>
+        <h4>Our Mission</h4>
+        <p>
+          Deliver sustainable farming methods, modern poultry advancements, skill-building programs & business opportunities to enhance productivity, food safety & rural economic growth.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+</section>
+
+ <div class="expo-section">
+  <div class="bg-overlay"></div>
+  
+  <h2 class="section-title">What to Expect at INDTEC EXPO 2025</h2>
+
+  <div class="container">
+    <div class="feature-grid">
+
+      <div class="feature-card">
+        <i class="fa-solid fa-industry icon"></i>
+        <h4>100+ Exhibitors</h4>
+        <p>Leading automation, robotics & manufacturing innovators.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-robot icon"></i>
+        <h4>Live Machinery</h4>
+        <p>Experience industrial robotics & machines in action.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-microchip icon"></i>
+        <h4>Tech Innovations</h4>
+        <p>AI, IIoT, Industry 4.0 & future-ready industrial solutions.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-users icon"></i>
+        <h4>Panel Talks</h4>
+        <p>Insights from tech leaders & industry decision-makers.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-handshake icon"></i>
+        <h4>B2B Networking</h4>
+        <p>Connect with OEMs, suppliers & global investors.</p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fa-solid fa-trophy icon"></i>
+        <h4>Awards Ceremony</h4>
+        <p>Honoring excellence in industrial innovation & leadership.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <section class="faq-section">
+  <div class="sun"></div>
+  <div class="cloud cloud1"></div>
+  <div class="cloud cloud2"></div>
+  <div class="cloud cloud3"></div>
+
+  <img src="images/grain.png" class="leaf" alt="">
+  <img src="images/grain.png" class="leaf" alt="">
+  <img src="images/grain.png" class="leaf" alt="">
+
+  <div class="container position-relative">
+    <div class="faq-heading">
+      <h2>Agri Expo - Frequently Asked Questions 🌿</h2>
+      <p>Explore everything about India’s largest Agri Innovation Expo — where nature meets technology, and growth begins.</p>
+    </div>
+
+   <div class="accordion" id="agriFaq">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+        🌾 What is the purpose of Agri Expo?
+      </button>
+    </h2>
+    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#agriFaq">
+      <div class="accordion-body">
+        Agri Expo aims to connect farmers, agri-startups, researchers, and equipment manufacturers to promote sustainable farming and technology-driven agriculture solutions.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+        🚜 Who can participate in the Agri Expo?
+      </button>
+    </h2>
+    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#agriFaq">
+      <div class="accordion-body">
+        Any agribusiness, farmer cooperative, agricultural university, or innovative agri-tech startup can participate and showcase their contributions to modern farming.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+        🌱 How can visitors register for the event?
+      </button>
+    </h2>
+    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#agriFaq">
+      <div class="accordion-body">
+        Visitors can register online via the official portal, select their visiting date, and receive an e-pass. Early registration ensures exclusive offers and priority access.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+        🌻 What can I expect at the Expo?
+      </button>
+    </h2>
+    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#agriFaq">
+      <div class="accordion-body">
+        From cutting-edge farm machinery demos and organic product displays to workshops and investor networking zones — Agri Expo 2025 is a one-stop destination for agri excellence.
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ NEW FAQ #5 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+        🧑‍🌾 Are farmers eligible for free entry?
+      </button>
+    </h2>
+    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#agriFaq">
+      <div class="accordion-body">
+        Yes! Registered farmers with valid ID are eligible for free entry. Special knowledge workshops and training sessions are also available for them.
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ NEW FAQ #6 -->
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+        🧾 Will certificates be provided for workshops?
+      </button>
+    </h2>
+    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#agriFaq">
+      <div class="accordion-body">
+        Yes, participants attending certified agricultural training & innovation workshops will receive participation certificates approved by partnering institutions.
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="wave"></div>
+</section>
+
+
+   <div class="container-fluid" style="padding: 0px;overflow: hidden;">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="images/foot.png" width="100%"  alt="">
+            </div>
+        </div>
+    </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-start">
+        <!-- Logo -->
+        <div class="col-lg-4 col-md-6 footer-logo text-center text-lg-start mb-4 mb-lg-0">
+          <img src="images/mainlogo.png" style="background-color: white;border-top-left-radius: 50px;border-bottom-right-radius: 50px;" alt="Agri Intex 2025 Logo">
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <div class="col-lg-4 col-md-6 footer-section mb-4 mb-lg-0">
+          <h5>Explore</h5>
+          <ul class="footer-links p-0">
+            <li><a href="index.html"><i class="fa-solid fa-leaf me-2"></i>Home</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-leaf me-2"></i>About</a></li>
+            <li><a href="exhibitors.html"><i class="fa-solid fa-leaf me-2"></i>Exhibitors</a></li>
+            <li><a href="visitors.html"><i class="fa-solid fa-leaf me-2"></i>Visitors</a></li>
+            <li><a href="sponsership.html"><i class="fa-solid fa-leaf me-2"></i>Sponsership</a></li>
+            <li><a href="gallery.html"><i class="fa-solid fa-leaf me-2"></i>Gallery</a></li>
+            <li><a href="contact.html"><i class="fa-solid fa-leaf me-2"></i>Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-4 col-md-12 footer-section">
+          <h5>Contact</h5>
+          <div class="footer-contact">
+            <p><i class="fa-solid fa-phone"></i> +91 422 2222396</p>
+            <p><i class="fa-solid fa-envelope"></i> agriintex@codissia.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © All Copyright 2025 by Agri Expo. Designed and Developed by 
+      <a href="#">Webads</a> | 
+      <a href="#">Terms of Use</a> | 
+      <a href="#">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <script>
+  const items = document.querySelectorAll('.accordion-item');
+  const revealOnScroll = () => {
+    items.forEach(item => {
+      const rect = item.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        item.classList.add('visible');
+      }
+    });
+  };
+  window.addEventListener('scroll', revealOnScroll);
+  revealOnScroll();
+</script>
+ <script>
+    // Counter Animation
+    const counters = document.querySelectorAll('.expo-stats-number');
+    const speed = 150; // Lower = faster
+
+    const animateCounters = () => {
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const inc = target / speed;
+
+          if (count < target) {
+            counter.innerText = Math.ceil(count + inc);
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target.toLocaleString();
+          }
+        };
+        updateCount();
+      });
+    };
+
+    // Run animation when in view
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          observer.disconnect();
+        }
+      });
+    });
+    observer.observe(document.querySelector('.expo-stats-section'));
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+</html>
+
+

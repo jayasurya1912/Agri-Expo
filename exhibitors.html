@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+ <div class="container-fluid" style="padding: 0px;overflow: hidden;">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="images/top.png" width="100%"   alt="">
+            </div>
+        </div>
+    </div>
+    
+
+  <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <!-- Logo (Mobile Only) -->
+    <a class="navbar-brand d-lg-none" href="index.html">
+      <img src="images/mainlogo.png" alt="Logo" class="navbar-logo">
+    </a>
+
+    <!-- Hamburger (sidebar trigger) -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Menu -->
+    <div class="collapse navbar-collapse justify-content-center d-none d-lg-block">
+      <ul class="navbar-nav w-100 justify-content-center">
+        <!-- Left Menu -->
+        <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+
+        <!-- Dropdown for OUR PARTNERS -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="partnersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            EXHIBITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
+            <li><a class="dropdown-item" href="exhibitors.html">EXHIBITORS</a></li>
+            <li><a class="dropdown-item" href="salzer.html">EXHIBITORS</a></li>
+          </ul>
+        </li>
+
+        <!-- Center Logo -->
+        
+
+        <!-- Right Menu -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle left-gap" href="#" id="partnersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            VISITORS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="partnersDropdown">
+            <li><a class="dropdown-item" href="lauritzknudsen.html">VISITORS</a></li>
+            <li><a class="dropdown-item" href="salzer.html">VISITORS</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link right-gap" href="products.html">FLOOR PLAN</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">BROCHURE</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Offcanvas Menu -->
+<div class="offcanvas offcanvas-start offcanvas-custom" tabindex="-1" id="mobileMenu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title"><img src="images/mainlogo.png" style="align-items: center;" width="100px" alt=""></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav">
+      <li class="nav-item"><a class="nav-link " href="index.html">HOME</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+      <li class="nav-item"><a class="nav-link" href="products.html">PRODUCTS</a></li>
+
+      <!-- Dropdown inside Offcanvas -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="partnersDropdownMobile" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          OUR PARTNERS
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="partnersDropdownMobile">
+          <li><a class="dropdown-item" href="lauritzknudsen.html">LAURITZ KNUDSEN</a></li>
+            <li><a class="dropdown-item" href="salzer.html">SALZER</a></li>
+            <li><a class="dropdown-item" href="esbee.html">ESBEE</a></li>
+            <li><a class="dropdown-item" href="gic.html">GIC</a></li>
+            <li><a class="dropdown-item" href="cselectric.html">C&S ELECTIC</a></li>
+            <li><a class="dropdown-item " href="indoasian.html">INDOASIAN</a></li>
+            <li><a class="dropdown-item" href="minilecindia.html">MINILECINDIA</a></li>
+            <li><a class="dropdown-item" href="elmex.html">ELMEX</a></li>
+            <li><a class="dropdown-item" href="selec.html">SELEC</a></li>
+            <li><a class="dropdown-item" href="threed.html">3D</a></li>
+            <li><a class="dropdown-item" href="wago.html">WAGO</a></li>
+            <li><a class="dropdown-item" href="crigroups.html">CRI GROUPS</a></li>
+            <li><a class="dropdown-item" href="lapp.html">LAPP</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="ourclients.html">OUR CLIENTS</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">BLOG</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="container-fluid" style="padding: 0px;overflow: hidden;">
+  <div class="row">
+    <div class="col-lg-12">
+      <img src="images/exhiban.png" width="100%"  alt="">
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 style="font-weight: 600;color: #41a451;">Exhibit With Industry Leaders</h2>
+            <p style="font-size: 18px;margin-top: 20px;margin-bottom: 30px;">A powerful platform to showcase the latest innovations in Agriculture & Poultry technology, connect with business <br> decision-makers, and accelerate your market growth.</p>
+        </div>
+    </div>
+</div>
+
+    <section class="marquee-section">
+    <div class="container-fluid">
+      <div class="marquee-track">
+
+        <div class="marquee-inner">
+          <span class="marquee-item">Talent Acquisition Employee Engagement Employee Engagement Employee Engagement Employee Engagement</span>
+         
+        </div>
+
+        <!-- Duplicate for infinite loop -->
+
+      </div>
+    </div>
+  </section>
+
+
+<section class="industries-sec py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold">Agriculture Pavilion</h2>
+
+    <div class="row g-3">
+
+      <!-- Card -->
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/eone.jpg" alt="">
+          <span>Agricultural Machinery & Equipment</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/atwo.webp">
+          <span>Irrigation, Fertigation & Water Management Solutions</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/etwo.jpg" alt="">
+          <span>Greenhouse & Polyhouse Technology</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/afour.jpg" alt="">
+          <span> Seeds, Fertilizers & Bio-manure</span>
+        </div>
+      </div>
+
+      <!-- Add more cards similarly -->
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/afive.jpg" alt="">
+          <span>Crop Inputs, Plant Protection & Nutrients</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/esix.jpg" alt="">
+          <span> Precision Farming & Smart Farm Tools</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/asix.jpg" alt="">
+          <span>Post-Harvest Handling & Storage Equipment</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right"> 
+        <div class="industry-box">
+          <img src="images/aseven.jpg" alt="">
+          <span>Cold Chain Solutions & Perishable Cargo Handling</span>
+        </div>
+      </div>
+
+       <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/efour.jpg" alt="">
+          <span>Labour-saving Implements & Agri Automation Technology</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/aeight.jpg" alt="">
+          <span>Agritech Startups & Digital Farming Tools</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/anine.jpg" alt="">
+          <span>Hydroponics & Advanced Cultivation Systems</span>
+        </div>
+      </div>
+
+      <!-- Add more cards similarly -->
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/aten.webp" alt="">
+          <span>Food Processing & Packaging Machinery</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/aeleven.webp" alt="">
+          <span>Logistics Providers, Warehousing & Surveying</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/atwelve.jpg" alt="">
+          <span>Government Departments & Agri Boards</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/athirteen.jpg" alt="">
+          <span>R&D Organizations & Consultants</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="industriess-sec py-5">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold"> Poultry Pavilion</h2>
+
+    <div class="row g-3">
+
+      <!-- Card -->
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pnone.jpg" alt="">
+          <span>Poultry Farming Equipment & Automation</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pone.jpg" alt="">
+          <span>Egg & Meat Processing Technology</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pntwo.jpg" alt="">
+          <span>Poultry Feed Machinery & Nutrition Solutions</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pnthree.jpg" alt="">
+          <span>Biosecurity, Health & Diagnostics Equipment</span>
+        </div>
+      </div>
+
+      <!-- Add more cards similarly -->
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pfour.jpg" alt="">
+          <span> Veterinary Medicines, Vaccines & Additives</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pthree.jpg" alt="">
+          <span> Hatchery & Breeding Solutions</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pnfour.webp" alt="">
+          <span>Poultry Waste Management Systems</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/psix.jpg" alt="">
+          <span>Housing, Climate Control & Insulation Technology</span>
+        </div>
+      </div>
+
+       <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pnsix.jpg" alt="">
+          <span>Transport Vehicles & Live Bird Handling</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pnseven.avif" alt="">
+          <span> Certification Agencies & Industry Services</span>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pneigth.webp" alt="">
+          <span>Cage Systems, Drinkers, Feeders & Accessories</span>
+        </div>
+      </div>
+
+      <!-- Add more cards similarly -->
+      <div class="col-lg-3 col-md-4 col-6 industry-card wow-card" data-aos="zoom-out-right">
+        <div class="industry-box">
+          <img src="images/pnnine.jpg" alt="">
+          <span> Chilling, Refrigeration & Storage Solutions</span>
+        </div>
+      </div>
+
+      
+
+    </div>
+  </div>
+</section>
+
+
+ <div class="container">
+    <div class="form-section">
+      <h3 class="form-title" style="color: white;">Exhibitor Registration Form</h3>
+      <form id="contactForm">
+  <div class="row mb-3 mt-5">
+    <div class="col-md-6">
+      <label for="companyName" class="form-label">Company Name</label>
+      <input type="text" class="form-control" id="companyName" placeholder="Enter your company name">
+    </div>
+    <div class="col-md-6">
+      <label for="contactPerson" class="form-label">Contact Person Name</label>
+      <input type="text" class="form-control" id="contactPerson" placeholder="Full name">
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="designation" class="form-label">Designation</label>
+      <input type="text" class="form-control" id="designation" placeholder="Designation">
+    </div>
+    <div class="col-md-6">
+      <label for="mobileNumber" class="form-label">Mobile Number</label>
+      <input type="tel" class="form-control" id="mobileNumber" placeholder="Mobile number">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="address" class="form-label">Address</label>
+    <textarea class="form-control" id="address" rows="2" placeholder="Full address"></textarea>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email ID</label>
+      <input type="email" class="form-control" id="email" placeholder="example@email.com">
+    </div>
+    <div class="col-md-6">
+      <label for="website" class="form-label">Website</label>
+      <input type="url" class="form-control" id="website" placeholder="https://yourcompany.com">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="products" class="form-label">Products / Services of Your Company</label>
+    <textarea class="form-control" id="products" rows="3" placeholder="List your products/services"></textarea>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="spaceType" class="form-label">Bare Space / Shell Space</label>
+      <select class="form-select form-control" id="spaceType">
+        <option selected disabled>Choose...</option>
+        <option value="Bare">Bare Space</option>
+        <option value="Shell">Shell Space</option>
+      </select>
+    </div>
+    <div class="col-md-6">
+      <label for="stallArea" class="form-label">Preferred Stall Area (in Sq. Mtr.)</label>
+      <input type="number" class="form-control" id="stallArea" placeholder="e.g., 9, 12, 18">
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-dangerese px-5">Submit</button>
+  </div>
+</form>
+    </div>
+  </div>
+
+
+ <section class="footer-banner mt-5">
+    <div class="content">
+      <h2>Join the Agri & Poultry Revolution</h2>
+      <p>
+        Be a part of India’s most dynamic business expo that bridges innovation, technology, and opportunity. 
+        Connect with global leaders, explore smart solutions, and transform your agri-poultry business.
+      </p>
+      <a href="#register" class="btn btn-custom">
+        <i class="fa-solid fa-seedling me-2"></i> Register Now
+      </a>
+    </div>
+  </section>
+
+
+
+   <div class="container-fluid" style="padding: 0px;overflow: hidden;">
+        <div class="row">
+            <div class="col-lg-12">
+                <img src="images/foot.png" width="100%"  alt="">
+            </div>
+        </div>
+    </div>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="row align-items-start">
+        <!-- Logo -->
+        <div class="col-lg-4 col-md-6 footer-logo text-center text-lg-start mb-4 mb-lg-0">
+          <img src="your-logo.png" alt="Agri Intex 2025 Logo">
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Explore -->
+        <div class="col-lg-4 col-md-6 footer-section mb-4 mb-lg-0">
+          <h5>Explore</h5>
+          <ul class="footer-links p-0">
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>Home</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>About</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>Brochure</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>Visitor Profile</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>Photo Gallery</a></li>
+            <li><a href="#"><i class="fa-solid fa-leaf me-2"></i>Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-4 col-md-12 footer-section">
+          <h5>Contact</h5>
+          <div class="footer-contact">
+            <p><i class="fa-solid fa-phone"></i> +91 422 2222396</p>
+            <p><i class="fa-solid fa-envelope"></i> agriintex@codissia.com</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © All Copyright 2025 by Agri-Intex. Designed and Developed by 
+      <a href="#">Webads</a> | 
+      <a href="#">Terms of Use</a> | 
+      <a href="#">Privacy Policy</a>
+    </div>
+  </footer>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
