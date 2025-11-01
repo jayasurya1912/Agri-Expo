@@ -314,7 +314,7 @@
 /* Background Image with Overlay */
 .about-section {
   position: relative;
-  background: url("images/abtn.png") no-repeat center center/cover;
+  background: url("images/abt.jpeg") no-repeat center center/cover;
   min-height: 420px;
   border-radius: 8px;
   overflow: hidden;
@@ -740,7 +740,7 @@
   100% { transform: rotate(270deg); }
 }
   .cards-section {
-      background-image: url('images/tractor.png');
+      background-image: url('images/tracto.jpeg');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -844,7 +844,7 @@
       /* Background */
     .card-section {
       position: relative;
-      background: url("images/abtn.png") no-repeat center center/cover;
+      background: url("images/abt.jpeg") no-repeat center center/cover;
       padding: 80px 0;
     }
 
@@ -1306,7 +1306,7 @@
 
      .agri-section {
       position: relative;
-      background: url('images/tractor.png') center center/cover no-repeat;
+      background: url('images/tracto.jpeg') center center/cover no-repeat;
       background-attachment: fixed;
       color: #555;
       padding: 80px 20px;
@@ -1857,7 +1857,7 @@
 /* Grid */
 .expo-section {
   position: relative;
-  background: url("images/tractor.png") center/cover no-repeat;
+  background: url("images/tracto.jpeg") center/cover no-repeat;
   padding: 80px 0;
   overflow: hidden;
 }
@@ -2000,11 +2000,11 @@
 }
 .industries-sec {
   background: #f6f8f4;
-   background: url("images/1305.jpg") center/cover no-repeat;
+   background: url("images/grass.jpg") center/cover no-repeat;
 }
 .industriess-sec {
   background: #f6f8f4;
-   background: url("images/abtn.png") center/cover no-repeat;
+   background: url("images/abt.jpeg") center/cover no-repeat;
 }
 
 .industry-box {
