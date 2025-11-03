@@ -8,7 +8,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
+<link rel="icon" href="images/mainlogo.png">
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -442,5 +442,42 @@
       setTimeout(() => loader.classList.add("hidden"), 1000);
     });
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+
+<script>
+  emailjs.init("KMyyQryEe215wzBPG"); // Replace with your actual EmailJS public key
+
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const templateParams = {
+      firstName: document.getElementById("firstName").value,
+      lastName: document.getElementById("lastName").value,
+      mobile: document.getElementById("mobile").value,
+      email: document.getElementById("email").value,
+      company: document.getElementById("company").value,
+      designation: document.getElementById("designation").value,
+      website: document.getElementById("website").value,
+      country: document.getElementById("country").value,
+      state: document.getElementById("state").value,
+      city: document.getElementById("city").value,
+    };
+
+    emailjs.send("service_0zhux7b", "template_9ubhhoh", templateParams)
+      .then(function (response) {
+        alert("Thank you for contacting us. We will get back to you soon.");
+        document.getElementById("contactForm").reset();
+      }, function (error) {
+        alert("Failed to send email: " + JSON.stringify(error));
+      });
+  });
+</script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
 </body>
 </html>

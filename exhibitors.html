@@ -8,6 +8,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="icon" href="images/mainlogo.png">
 
   <link rel="stylesheet" href="style.css">
 
@@ -574,5 +575,36 @@
       setTimeout(() => loader.classList.add("hidden"), 1000);
     });
   </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("1N5Fpw-OrZpkDJwvp"); // Replace with your actual EmailJS public key
+
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const templateParams = {
+      companyName: document.getElementById("companyName").value,
+      contactPerson: document.getElementById("contactPerson").value,
+      designation: document.getElementById("designation").value,
+      mobileNumber: document.getElementById("mobileNumber").value,
+      address: document.getElementById("address").value,
+      email: document.getElementById("email").value,
+      website: document.getElementById("website").value,
+      products: document.getElementById("products").value,
+      spaceType: document.getElementById("spaceType").value,
+      stallArea: document.getElementById("stallArea").value,
+    };
+
+    emailjs.send("service_mlwmog5", "template_4nfkqlv", templateParams)
+      .then(function (response) {
+        alert("Thank you for contacting us. We will get back to you soon.");
+        document.getElementById("contactForm").reset();
+      }, function (error) {
+        alert("Failed to send email: " + JSON.stringify(error));
+      });
+  });
+</script>
 </body>
 </html>

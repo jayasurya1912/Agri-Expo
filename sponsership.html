@@ -8,7 +8,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
+<link rel="icon" href="images/mainlogo.png">
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -282,33 +282,33 @@
         <div class="col-md-6">
           <div class="agri-sponsor-form">
             <h4>Sponsorship Enquiry Form</h4>
-            <form>
-              <div class="mb-3">
-                <input type="text" class="form-control agri-sponsor-input" placeholder="Full Name" required>
-              </div>
-              <div class="mb-3">
-                <input type="email" class="form-control agri-sponsor-input" placeholder="Email Address" required>
-              </div>
-              <div class="mb-3">
-                <input type="text" class="form-control agri-sponsor-input" placeholder="Company Name" required>
-              </div>
-              <div class="mb-3">
-                <input type="tel" class="form-control agri-sponsor-input" placeholder="Phone Number" required>
-              </div>
-              <div class="mb-3">
-                <select class="form-control agri-sponsor-input" required>
-                  <option value="">Select Sponsorship Type</option>
-                  <option>Platinum Sponsor</option>
-                  <option>Gold Sponsor</option>
-                  <option>Silver Sponsor</option>
-                  <option>Exhibitor Partner</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <textarea class="form-control agri-sponsor-input" rows="4" placeholder="Message or Enquiry"></textarea>
-              </div>
-              <button type="submit" class="agri-sponsor-btn">Submit Request</button>
-            </form>
+             <form id="sponsorForm">
+      <div class="mb-3">
+        <input type="text" class="form-control agri-sponsor-input" id="fullName" placeholder="Full Name" required>
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control agri-sponsor-input" id="email" placeholder="Email Address" required>
+      </div>
+      <div class="mb-3">
+        <input type="text" class="form-control agri-sponsor-input" id="companyName" placeholder="Company Name" required>
+      </div>
+      <div class="mb-3">
+        <input type="tel" class="form-control agri-sponsor-input" id="phone" placeholder="Phone Number" required>
+      </div>
+      <div class="mb-3">
+        <select class="form-control agri-sponsor-input" id="sponsorType" required>
+          <option value="">Select Sponsorship Type</option>
+          <option>Platinum Sponsor</option>
+          <option>Gold Sponsor</option>
+          <option>Silver Sponsor</option>
+          <option>Exhibitor Partner</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control agri-sponsor-input" id="message" rows="4" placeholder="Message or Enquiry"></textarea>
+      </div>
+      <button type="submit" class="agri-sponsor-btn">Submit Request</button>
+    </form>
           </div>
         </div>
 
@@ -408,10 +408,43 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
  <script>
     window.addEventListener("load", () => {
       const loader = document.getElementById("agriFieldLoader");
       setTimeout(() => loader.classList.add("hidden"), 1000);
+    });
+  </script>
+
+  <script>
+    // Initialize EmailJS
+    emailjs.init("KMyyQryEe215wzBPG"); // 🔹 Replace with your EmailJS public key
+
+    // Handle form submission
+    document.getElementById("sponsorForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Collect form data
+      const templateParams = {
+        fullName: document.getElementById("fullName").value,
+        email: document.getElementById("email").value,
+        companyName: document.getElementById("companyName").value,
+        phone: document.getElementById("phone").value,
+        sponsorType: document.getElementById("sponsorType").value,
+        message: document.getElementById("message").value,
+      };
+
+      console.log("Sending data:", templateParams); // ✅ Debug log
+
+      // Send email via EmailJS
+      emailjs.send("service_0zhux7b", "template_0uj364j", templateParams)
+        .then(function (response) {
+          alert(" ");
+          document.getElementById("sponsorForm").reset();
+        }, function (error) {
+          alert(" Failed to send email: " + JSON.stringify(error));
+          console.error("EmailJS Error:", error);
+        });
     });
   </script>
 </body>
