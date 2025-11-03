@@ -859,6 +859,12 @@
       <a href="#">Terms of Use</a> | 
       <a href="#">Privacy Policy</a>
     </div>
+     <button class="fire-scroll-top" id="fireScrollTop">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+  <a href="https://wa.me/917406213220" class="whatsapp-float" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
   </footer>
 
 <!-- Bootstrap JS -->
@@ -977,6 +983,21 @@
           alert("❌ Failed to send message: " + JSON.stringify(error));
           console.error("EmailJS Error:", error);
         });
+    });
+  </script>
+  <script>
+     window.addEventListener("load", () => {
+      const preloader = document.getElementById("firePreloader");
+      preloader.classList.add("fire-hidden");
+    });
+    const scrollBtn = document.getElementById("fireScrollTop");
+
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   </script>
 </body>
