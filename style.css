@@ -1,6 +1,31 @@
+    /* 🔹 Prevent unwanted horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* 🔹 Ensure all sections scale correctly */
+* {
+  box-sizing: border-box;
+}
+
+/* 🔹 Responsive images and videos */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🔹 Fix Bootstrap container overflows */
+.container, .row, .col {
+  overflow: hidden;
+}
+
+    
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
+    
+      
       
      
     }
@@ -138,6 +163,34 @@
   position: relative; /* Needed for ::before */
   transition: color 0.3s ease;
 }
+/* ✅ Fix overflow in mobile menu */
+.offcanvas-custom {
+  background: #fff;
+  width: 260px;
+  overflow-y: auto;
+}
+
+/* ✅ Ensure dropdown works inside offcanvas */
+.offcanvas-custom .dropdown-menu {
+  position: static !important;
+  float: none;
+  box-shadow: none;
+  background-color: #f8f9fa;
+  margin-left: 15px;
+  border-radius: 10px;
+}
+
+/* Dropdown items styling */
+.offcanvas-custom .dropdown-item {
+  font-size: 16px;
+  padding: 8px 15px;
+}
+
+/* Optional: dropdown toggle icon color */
+.offcanvas-custom .dropdown-toggle::after {
+  filter: invert(0.3);
+}
+
 
 
 .carousel-indicators [data-bs-target] {
@@ -474,6 +527,7 @@
     .footer-links li {
       list-style: none;
       margin-bottom: 10px;
+      
     }
 
     .footer-links li a {
