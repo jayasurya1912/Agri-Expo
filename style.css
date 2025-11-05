@@ -112,20 +112,43 @@ img, video {
     .agriField-preloader.hidden {
       animation: fadeOut 1s forwards;
     }
+    .topbar {
+      background-color: #f8f9fa;
+      font-size: 0.9rem;
+      padding: 5px 0;
+    }
+    .topbar a {
+      color: #333;
+      margin-left: 15px;
+      text-decoration: none;
+    }
+    .topbar a:hover {
+      color: #007bff;
+    }
+    @media (max-width: 576px) {
+      .topbar {
+        text-align: center;
+      }
+      .topbar a {
+        margin: 0 5px;
+      }
+    }
 
     .navbar-custom {
-      background: #fdfdf5;
+      background: white;
+      padding: 10px;
     }
     .navbar-logo {
       max-height: 60px;
     }
     .nav-link {
-      font-weight: 500;
+      font-weight: 700;
       color: #000;
       text-transform: uppercase;
       margin: 0 12px;
-      font-size: 14px;
+      font-size: 18px;
       margin-left: 40px;
+      
     }
     .nav-link:hover {
       color: #43c334 ;
@@ -154,11 +177,11 @@ img, video {
     /* Active Nav Item */
 /* Base nav link */
 .nav-link {
-  font-weight: 500;
+  font-weight: 700;
   color: #000;
   text-transform: uppercase;
   margin: 0 12px;
-  font-size: 17px;
+  font-size: 18px;
   margin-left: 40px;
   position: relative; /* Needed for ::before */
   transition: color 0.3s ease;
@@ -169,6 +192,22 @@ img, video {
   width: 260px;
   overflow-y: auto;
 }
+.active
+{
+  background-color: #00ff9d;
+  color: black;
+}
+.navbar-custom .nav-link {
+  font-weight: 600;
+  padding: 10px 16px;
+}
+
+.navbar-custom span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
 
 /* ✅ Ensure dropdown works inside offcanvas */
 .offcanvas-custom .dropdown-menu {
@@ -3414,7 +3453,96 @@ img, video {
     transform: scale(1.1);
     background: #1ebe5c;
   }
+.review-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  border: 1px solid #e4e4e4;
+}
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.reviewer-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #28a745;
+}
+.review-stars i {
+  color: #f4b400; /* Google star color */
+  margin-right: 2px;
+}
+.review-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+ /* Background Image Section */
+.vision-section-with-bg {
+  background: url("images/efours.jpg") center/cover fixed;
+  position: relative;
+  overflow: hidden;
+}
 
- 
+/* Dark gradient overlay */
+.vision-section-with-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 60, 0, 0.65); /* dark green overlay */
+  backdrop-filter: blur(1px);
+}
+
+/* Card boxes */
+.vm-box {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: .3s;
+  border: 2px solid rgba(255,255,255,0.4);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.vm-box:hover {
+  transform: translateY(-8px);
+  background: #fff;
+}
+
+/* Icons */
+.vm-icon {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  font-size: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* Leaves */
+.leaf-shape-left,
+.leaf-shape-right {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: url('https://i.ibb.co/JHfJf7J/leaf.png') no-repeat center/contain;
+  opacity: 0.1;
+  animation: float 4s ease-in-out infinite;
+}
+
+.leaf-shape-left { left: -40px; bottom: 0; }
+.leaf-shape-right { top: -30px; right: -40px; animation-delay:1s; }
+
+/* Animation */
+@keyframes fadeUp {0% {opacity:0; transform:translateY(30px);}100% {opacity:1; transform:translateY(0);}}
+.fade-up { opacity: 0; animation: fadeUp 1s forwards; }
+
+@keyframes float {0%,100%{transform:translateY(0);}50%{transform:translateY(-10px);}}
+
 
 
