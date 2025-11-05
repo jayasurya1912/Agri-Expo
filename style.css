@@ -3158,22 +3158,29 @@ img, video {
     }
 
     /* Sponsor Logos */
-    .expo-sponsor-box {
-      background: #fff;
-      border-radius: 12px;
-      padding: 20px;
-      transition: all 0.4s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-      animation: fadeInUp 1.5s ease;
-      
-    }
+    /* Sponsor Logos */
+.expo-sponsor-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  animation: fadeInUp 1.5s ease;
 
-    .expo-sponsor-box img {
-      max-width: 120px;
-      height: auto;
-      transition: transform 0.4s ease;
-     
-    }
+  /* new added to center image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+}
+
+.expo-sponsor-box img {
+  max-width: 120px;
+  height: auto;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
 
     .expo-sponsor-box:hover img {
       transform: scale(1.05);
