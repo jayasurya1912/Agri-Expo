@@ -15,6 +15,25 @@
 </head>
 <body>
 
+
+   <div class="popup-overlay" id="popupOverlay">
+    <div class="popup-card">
+      <span class="close-btn" id="popupCloseBtn">&times;</span>
+      <img src="images/mainlogo.png" width="100%" alt="Logo" style="border-radius: 15px;">
+      <h4 class="mt-3">Agri Poultry Tec Expo Countdown</h4>
+      <div class="countdown" id="countdownDisplay">Loading countdown...</div>
+      <p style="color: black;">
+        Join India’s most dynamic platform driving innovation in agriculture and poultry technology.  
+        Discover smart solutions and profitable opportunities!
+      </p>
+      <a href="exhibitors.html" class="btn rounded-pill px-4" style="background-color: #28aa4a; color: white;">
+        Register Now
+      </a>
+    </div>
+  </div>
+
+  
+
    <div class="agriField-preloader" id="agriFieldLoader">
     <div class="agriField-bars">
       <div class="agriField-bar"></div>
@@ -958,6 +977,56 @@
 
     scrollBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+    <script>
+    // 🎯 Event Date (Target)
+    const eventDate = new Date("March 8, 2026 00:00:00").getTime();
+    const countdownDisplay = document.getElementById("countdownDisplay");
+
+    // ⏳ Countdown Function
+    function showCountdown() {
+      const now = new Date().getTime();
+      const remainingTime = eventDate - now;
+
+      if (remainingTime <= 0) {
+        countdownDisplay.innerHTML = "Event Started!";
+        clearInterval(countdownTimer);
+        return;
+      }
+
+      const daysLeft = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+      const hoursLeft = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutesLeft = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+      const secondsLeft = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+      countdownDisplay.innerHTML = `${daysLeft}d ${hoursLeft}h ${minutesLeft}m ${secondsLeft}s left`;
+    }
+
+    // 🔁 Update countdown every second
+    const countdownTimer = setInterval(showCountdown, 1000);
+    showCountdown();
+
+    // 💡 Popup Logic
+    const popupOverlay = document.getElementById("popupOverlay");
+    const popupCloseBtn = document.getElementById("popupCloseBtn");
+
+    // Show popup after 7 seconds
+    setTimeout(() => {
+      popupOverlay.classList.add("show");
+    }, 7000);
+
+    // Close popup on click of "X"
+    popupCloseBtn.addEventListener("click", () => {
+      popupOverlay.classList.remove("show");
+    });
+
+    // Close popup when clicking outside
+    popupOverlay.addEventListener("click", (event) => {
+      if (event.target === popupOverlay) {
+        popupOverlay.classList.remove("show");
+      }
     });
   </script>
 </body>
