@@ -88,7 +88,7 @@
       <ul class="navbar-nav w-100 justify-content-center">
 
         <!-- Left Menu -->
-        <li class="nav-item"><a class="nav-link" style="background-color: #218838;color: white;" href="index.html">HOME</a></li>
+        <li class="nav-item"><a class="nav-link" style="background-color: #f2cd4f;color: black;" href="index.html">HOME</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
 
         <!-- Exhibitors Dropdown -->
@@ -212,6 +212,7 @@
 
 
  <section class="conference-section">
+  <h2 style="color: #218838;">EXPO DATES : APRIL 10 & 11 -  2026 </h2>
     <h6>Second Edition - Bigger, Better!</h6>
    <h2 id="typingText" class="text-black"></h2>
 
@@ -709,42 +710,56 @@
 </section>
   
 
-  <div class="container my-5">
-  <div class="row contact-section">
-    <!-- Left Image -->
-    <div class="col-md-6 p-0">
-      <img src="images/efours.jpg" loading="lazy" alt="Contact Us" class="contact-img h-100">
-    </div>
+<div class="modal fade" id="contactPopup" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content contact-popup-content">
 
-    <!-- Right Form -->
-    <div class="col-md-6 contact-form">
-      <h3 class="fw-bold text-white mb-3">Send Us a Message</h3>
-      <p class="text-white">Have a project in mind or need expert advice? Fill out the form below and we’ll get back to you within 24 hours.</p>
+      <!-- Close Button -->
+      <button type="button" class="popup-close-btn" data-bs-dismiss="modal">
+        &times;
+      </button>
 
-       <form id="contactForm">
-      <div class="mb-3">
-        <label class="form-label">Full Name</label>
-        <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+      <div class="row g-0">
+        <!-- Left Image -->
+        <div class="col-md-6">
+          <img src="images/efours.jpg" class="img-fluid h-100 w-100" style="object-fit: cover;" />
+        </div>
+
+        <!-- Right Form -->
+        <div class="col-md-6 p-4">
+          <h3 class="fw-bold text-white mb-3">Send Us a Message</h3>
+          <p class="text-white">Have a project in mind or need expert advice? Fill out the form below and we’ll get back to you within 24 hours.</p>
+
+          <form id="contactForm">
+            <div class="mb-3">
+              <label class="form-label text-white">Full Name</label>
+              <input type="text" class="form-control" id="fullName" placeholder="Full Name" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label text-white">Email Address</label>
+              <input type="email" class="form-control" id="email" placeholder="Email" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label text-white">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label text-white">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn submit-btn" style="background-color: white; color: #218838;">Submit</button>
+
+            <div class="privacy-note text-center text-white mt-2">
+              We respect your privacy. Your information is safe with us and will never be shared.
+            </div>
+          </form>
+
+        </div>
       </div>
-
-      <div class="mb-3">
-        <label class="form-label">Email Address</label>
-        <input type="email" class="form-control" id="email" placeholder="Email" required>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label">Phone Number</label>
-        <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label">Message</label>
-        <textarea class="form-control" id="message" rows="4" placeholder="Message" required></textarea>
-      </div>
-
-      <button type="submit" class="btn submit-btn " style="background-color: white; color: #218838;">Submit</button>
-      <div class="privacy-note text-center text-white">We respect your privacy. Your information is safe with us and will never be shared.</div>
-    </form>
     </div>
   </div>
 </div>
@@ -942,13 +957,23 @@
       setTimeout(() => loader.classList.add("hidden"), 1000);
     });
   </script>
- <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<!-- EmailJS SDK (v4) -->
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
 <script>
-    // ✅ Initialize EmailJS
-    emailjs.init("cvVSKba5mxNG51hBz"); // 🔹 Replace with your EmailJS public key
+  document.addEventListener("DOMContentLoaded", function () {
+    // ✅ Initialize EmailJS with public key (v4 syntax)
+    emailjs.init({
+      publicKey: "cvVSKba5mxNG51hBz",   // 🔹 Your PUBLIC KEY
+    });
 
     // ✅ Form submission handler
-    document.getElementById("contactForm").addEventListener("submit", function(e) {
+    const form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
 
       const templateParams = {
@@ -958,19 +983,26 @@
         message: document.getElementById("message").value,
       };
 
-      console.log("Sending data:", templateParams); // Debug log
+      console.log("Sending data:", templateParams);
 
       // ✅ Send via EmailJS
-      emailjs.send("service_c3jjr4g", "template_rescw57", templateParams)
-        .then(function(response) {
-          alert("Thank you for contacting us. We will get back to you soon.");
-          document.getElementById("contactForm").reset();
-        }, function(error) {
-          alert("❌ Failed to send message: " + JSON.stringify(error));
-          console.error("EmailJS Error:", error);
-        });
+      emailjs
+        .send("service_c3jjr4g", "template_rescw57", templateParams)
+        .then(
+          function (response) {
+            console.log("SUCCESS!", response);
+            alert("Thank you for contacting us. We will get back to you soon.");
+            form.reset();
+          },
+          function (error) {
+            console.error("EmailJS Error:", error);
+            alert("Failed to send message: " + (error?.text || JSON.stringify(error)));
+          }
+        );
     });
-  </script>
+  });
+</script>
+
   <script>
      window.addEventListener("load", () => {
       const preloader = document.getElementById("firePreloader");
@@ -1022,7 +1054,7 @@
     // Show popup after 7 seconds
     setTimeout(() => {
       popupOverlay.classList.add("show");
-    }, 7000);
+    }, 12000);
 
     // Close popup on click of "X"
     popupCloseBtn.addEventListener("click", () => {
@@ -1036,5 +1068,14 @@
       }
     });
   </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(() => {
+      var myModal = new bootstrap.Modal(document.getElementById('contactPopup'));
+      myModal.show();
+    }, 3000);
+  });
+</script>
 </body>
 </html>

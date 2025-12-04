@@ -135,7 +135,7 @@ img, video {
     }
 
     .navbar-custom {
-      background: white;
+      background: #086a20;
       padding: 10px;
     }
     .navbar-logo {
@@ -143,7 +143,7 @@ img, video {
     }
     .nav-link {
       font-weight: 700;
-      color: #000;
+      color: white;
       text-transform: uppercase;
       margin: 0 12px;
       font-size: 18px;
@@ -151,7 +151,7 @@ img, video {
       
     }
     .nav-link:hover {
-      color: #43c334 ;
+      color: #f2cd4f ;
     }
 
     /* Center alignment (desktop) */
@@ -178,7 +178,7 @@ img, video {
 /* Base nav link */
 .nav-link {
   font-weight: 700;
-  color: #000;
+  color: white;
   text-transform: uppercase;
   margin: 0 12px;
   font-size: 18px;
@@ -3628,4 +3628,40 @@ img, video {
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(10px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+     .contact-popup-content {
+      background: #218838;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Fixed Close Button */
+    .popup-close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 999;
+      background: white;
+      border-radius: 50%;
+      width: 35px;
+      height: 35px;
+      border: none;
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 22px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .icon-box img {
+      width: 48px;
+      height: 48px;
+      background: white;
+      padding: 5px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      
     }
