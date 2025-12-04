@@ -414,6 +414,13 @@ img, video {
   z-index: 1;
   height: 900px;
 }
+@media(max-width:550px)
+{
+  .about-section
+  {
+    height: 1220px;
+  }
+}
 
 .about-image::before {
   content: "";
