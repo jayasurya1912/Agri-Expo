@@ -207,6 +207,21 @@ img, video {
   font-weight: 600;
   color: #000;
 }
+@media(max-width:1000px)
+
+{
+
+  .nav-link {
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
+  margin: 0 12px;
+  font-size: 18px;
+  margin-left: 40px;
+  position: relative; /* Needed for ::before */
+  transition: color 0.3s ease;
+}
+}
 
 
 /* ✅ Ensure dropdown works inside offcanvas */
@@ -418,7 +433,7 @@ img, video {
 {
   .about-section
   {
-    height: 1220px;
+    height: 1250px;
   }
 }
 
